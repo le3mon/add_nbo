@@ -11,8 +11,6 @@ int main(int argc, char *argv[])
         printf("usage : ./add_nbo a.bin b.bin\n");
         exit(1);
     }
-    fp = fopen(argv[1],"r");
-    fp2 = fopen(argv[2],"r");
     if (((fp=fopen(argv[1],"r")) == NULL) || ((fp2=fopen(argv[2],"r")) == NULL) ){
         printf("Error : can't read file \n");
         exit(1);
