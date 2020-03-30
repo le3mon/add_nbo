@@ -6,12 +6,11 @@
 uint32_t get_data(char *arg){
     FILE *fp;
     uint32_t tmp;
-    size_t result;
     if((fp=fopen(arg,"r")) == NULL){
         printf("Error : can't open file \n");
         exit(1);
     }
-    if((result = fread(&tmp,1,sizeof (uint32_t),fp)) != 4){
+    if((fread(&tmp,1,sizeof (uint32_t),fp)) != 4){
         printf("Error : file error \n");
         exit(1);
     }
